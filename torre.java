@@ -24,28 +24,24 @@ public class Main {
         int num= M[i][j];
         for (int k=j+1; k<n; k++) {
           int nun=M[i][k];
-          d += nun;
+          soma += nun;
         }
         for (int l=j-1; l>=0; l--) {
           int nun=M[i][l];
-          e += nun;
+          soma += nun;
         }
         for (int x=i+1; x<n; x++) {
           int nun=M[x][j];
-          b += nun;
+          soma += nun;
         }
         for (int y=i-1; y>=0; y--) {
           int nun=M[y][j];
-          c += nun;
+          soma += nun;
         }
-        soma = d+e+b+c;
         if (soma>maior) {
           maior=soma;
         }
-        d=0;
-        e=0;
-        c=0;
-        b=0;
+        soma=0;
       }
     }
     System.out.println(maior);
